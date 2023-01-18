@@ -1,27 +1,29 @@
-main
-{
+@import './my-swiper.css';
+@import './stickyBlock.css';
+
+main {
   visibility: hidden;
 }
 
-.loader
-{
+.loader {
   display: block;
 }
 
-.burger__item.w--current
-{
+.burger__item.w--current{
   pointer-events: none;
 }
 
-.burger__item.w--current .h3--84
-{
+.burger__item.w--current .h3--84 {
   color: #7870F1;
 }
 
-::selection
-{
+::selection {
   background-color: #7870F1;
   color: white;
   -webkit-text-fill-color: white;
   -webkit-text-stroke-color: transparent;
+}
+
+.tabs__tab-link:has(+.tabs__tab-link.w--current) {
+  border-bottom:  1px solid #f3f3f3;
 }

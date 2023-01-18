@@ -1,0 +1,12 @@
+.scroll-cards__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+
+    &.active {
+        opacity: 1 !important;
+    }
+}

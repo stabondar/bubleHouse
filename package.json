@@ -28,7 +28,8 @@
     "gsap": "file:gsap-bonus.tgz",
     "locomotive-scroll": "^4.1.4",
     "raw-loader": "^4.0.2",
+    "swiper": "^8.4.6",
     "three": "^0.144.0",
-    "vercel": "^28.2.5"
+    "vercel": "^28.12.4"
   }
 }

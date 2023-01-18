@@ -1,0 +1,11 @@
+.scroll-cards__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.scroll-cards__img.active {
+  opacity: 1 !important;
+}/*# sourceMappingURL=stickyBlock.css.map */
