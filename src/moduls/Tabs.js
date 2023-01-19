@@ -29,7 +29,18 @@ export default class Tabs
 
                     activeLink = $('.usecase-tabs__btn.w--current')
                     activeIndex = activeLink.index()
-                })
+            })
+
+            link.on('click', () => {
+                if(activeIndex != 0) {
+                    activeLink.prev().click()
+                    } else {
+                        link.last().click()
+                    }
+
+                    activeLink = $('.usecase-tabs__btn.w--current')
+                    activeIndex = activeLink.index()
+            })
         }
         automatically()
   }
