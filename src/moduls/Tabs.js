@@ -31,8 +31,14 @@ export default class Tabs
                     activeIndex = activeLink.index()
             })
 
-            link.on('click', (index) => {
-                activeIndex = index
+            $(link).each(function(){
+                let self = $(this);
+                self.on('click', () => {
+                    let indexSelf = self.index();
+                    activeIndex = indexSelf;
+    
+                    console.log(activeIndex)
+                })
             })
         }
         automatically()

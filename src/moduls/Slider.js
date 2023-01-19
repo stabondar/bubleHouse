@@ -88,6 +88,7 @@ export default class Slider
       modules: [Pagination, Autoplay],
       keyboard: true,
       autoplay: true,
+      effect: "fade",
       direction: "horizontal",
       speed: 800,
       grabCursor: true,
