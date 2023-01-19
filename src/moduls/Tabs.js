@@ -31,9 +31,8 @@ export default class Tabs
                     activeIndex = activeLink.index()
             })
 
-            link.on('click', () => {
-                activeLink = $('.usecase-tabs__btn.w--current')
-                activeIndex = activeLink.index()
+            link.on('click', (index) => {
+                activeIndex = index
             })
         }
         automatically()
