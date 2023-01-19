@@ -32,14 +32,8 @@ export default class Tabs
             })
 
             link.on('click', () => {
-                if(activeIndex != 0) {
-                    activeLink.prev().click()
-                    } else {
-                        link.last().click()
-                    }
-
-                    activeLink = $('.usecase-tabs__btn.w--current')
-                    activeIndex = activeLink.index()
+                activeLink = $('.usecase-tabs__btn.w--current')
+                activeIndex = activeLink.index()
             })
         }
         automatically()
