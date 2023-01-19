@@ -63,5 +63,31 @@ export default class LocoGsap
             ScrollTrigger.refresh()
             locoScroll.update();
         });
+
+        $('.nav__link').eq(0).on('click', function() {
+            const slider = document.querySelector('#solution');
+                locoScroll.scrollTo(slider)
+        });
+
+        $('.nav__link').eq(1).on('click', function() {
+            const slider = document.querySelector('#launchpad');
+                locoScroll.scrollTo(slider)
+        });
+
+        $('[contact-us]').on('click', function() {
+            const slider = document.querySelector('#contacts');
+                locoScroll.scrollTo(slider)
+        });
+
+        $('[learn-more]').eq(0).on('click', function() {
+            const slider = document.querySelector('#solution');
+                locoScroll.scrollTo(slider)
+        });
+
+        $('[learn-more]').eq(1).on('click', function() {
+            const slider = document.querySelector('#launchpad');
+                locoScroll.scrollTo(slider)
+        });
     }
 }
+

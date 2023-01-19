@@ -13,17 +13,26 @@ export default class Sticky
         const init = () => {
             let body = $('.scroll-cards')
             let right = body.find('.scroll-cards__right')
+            let list = body.find('.scroll-cards__cards')
             let item = body.find('.scroll-cards__card')
             let mask = body.find('.scroll-cards__mask')
             let img = right.find('.scroll-cards__img')
-
+            let nextSection = $('.slider')
 
             mm.add(isDesktop, () => 
             {
                 // Pin
                 ScrollTrigger.create({
-                    trigger: body, start: 'top 0%', end: 'bottom 70%', pin: right
+                    trigger: body, start: 'top 0%', end: 'bottom 80%', pin: right
                 })
+
+                ScrollTrigger.create({
+                    trigger: list, start: 'top top', end: 'bottom bottom', pin: mask
+                })
+
+                let opacity = gsap.timeline({
+                    scrollTrigger: {trigger: list, start: 'bottom bottom', end: 'bottom 70%', scrub:true}
+                    }).to(mask, { opacity: 0})
     
                 $(item).each(function(index) {
                     let self = $(this)
