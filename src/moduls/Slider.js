@@ -87,13 +87,19 @@ export default class Slider
     const swiperHero = new Swiper('.hero__slider', {
       modules: [Pagination, Autoplay, EffectFade],
       // keyboard: true,
+      fadeEffect: { crossFade: true },
       autoplay: true,
+      virtualTranslate: true,
       effect: "fade",
+      autoplay: {
+        delay: 2500,
+    },
       // direction: "horizontal",
-      speed: 800,
+      speed: 1000,
       // grabCursor: true,
       // slidesPerView: 'auto',
       loop: true,
+      slidersPerView: 1,
       centeredSlides: false,
       breakpoints: {
         320: {
