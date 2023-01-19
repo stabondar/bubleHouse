@@ -85,7 +85,7 @@ export default class Slider
     //is hero slider
     $(".hero__slider").append(`<div class="swiper-pagination"></div>`);
     const swiperHero = new Swiper('.hero__slider', {
-      modules: [Pagination, Autoplaym, EffectFade],
+      modules: [Pagination, Autoplay, EffectFade],
       // keyboard: true,
       autoplay: true,
       effect: "fade",
