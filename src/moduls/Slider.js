@@ -1,6 +1,6 @@
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import Swiper, { Pagination, Autoplay, Scrollbar } from 'swiper'
+import Swiper, { Pagination, Autoplay, Scrollbar, EffectFade } from 'swiper'
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -85,12 +85,12 @@ export default class Slider
     //is hero slider
     $(".hero__slider").append(`<div class="swiper-pagination"></div>`);
     const swiperHero = new Swiper('.hero__slider', {
-      modules: [Pagination, Autoplay],
+      modules: [Pagination, Autoplaym, EffectFade],
       // keyboard: true,
       autoplay: true,
       effect: "fade",
       // direction: "horizontal",
-      // speed: 800,
+      speed: 800,
       // grabCursor: true,
       // slidesPerView: 'auto',
       loop: true,
