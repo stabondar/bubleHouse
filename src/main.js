@@ -4,6 +4,7 @@ import LocoGsap from './moduls/LocoGsap'
 import Slider from './moduls/Slider'
 import Tabs from './moduls/Tabs'
 import Sticky from './moduls/stickyBlock'
+import Text from './moduls/Text'
 
 const checkPages = () => 
 {
@@ -11,5 +12,6 @@ const checkPages = () =>
     const slider = new Slider()
     const tabs = new Tabs()
     const sticky = new Sticky()
+    const text = new Text()
 }
 checkPages()
