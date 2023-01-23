@@ -30,19 +30,24 @@ export default class Sticky
                     trigger: list, start: 'top top', end: 'bottom 80%', pin: mask
                 })
 
-                ScrollTrigger.create({
-                    trigger: body, start: 'top top', end: 'bottom 80%', pin: heading
-                })
+                // ScrollTrigger.create({
+                //     trigger: body, start: 'top top', end: 'bottom 80%', pin: heading
+                // })
 
-                // const mask = () => {
-                //     const item = $('.scroll-cards__mask');
-                //     const bg1 = "linear-gradient(180deg, #f3f3f2 21%, hsla(0, 0%, 95.3%, 0) 50%, #f3f3f3)";
-                //     const bg2 = "linear-gradient(180deg, #f3f3f2 0%, hsla(0, 0%, 95.3%, 0) 20%, #f3f3f3)";
+                const mask = () => {
+                    const item = $('.scroll-cards__mask');
+                    const bg1 = "linear-gradient(180deg, #f3f3f2 21%, hsla(0, 0%, 95.3%, 0) 50%, #f3f3f3)";
+                    const bg2 = "linear-gradient(180deg, #f3f3f2 0%, hsla(0, 0%, 95.3%, 0) 20%, #f3f3f3)";
 
-                //     let tl = gsap.timeline()
-                //         tl.fromTo(item, { backgroundImage: bg2, scrub: true}, {backgroundImage: bg1, scrub: true})
-                //     }
-                // mask()
+                    let tl = gsap.timeline({
+                        scrollTrigger : {
+                            trigger: body, start: 'top top', end: 'bottom 80%', pin: heading, scrub: true
+                        }
+                    })
+                        tl.fromTo(item, { backgroundImage: bg2}, {backgroundImage: bg1})
+                        
+                    }
+                mask()
 
 
 
