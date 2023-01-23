@@ -5,6 +5,7 @@ import Slider from './moduls/Slider'
 import Tabs from './moduls/Tabs'
 import Sticky from './moduls/stickyBlock'
 import Text from './moduls/Text'
+import Lines from './moduls/lines'
 
 const checkPages = () => 
 {
@@ -13,5 +14,6 @@ const checkPages = () =>
     const tabs = new Tabs()
     const sticky = new Sticky()
     const text = new Text()
+    const lines = new Lines()
 }
 checkPages()

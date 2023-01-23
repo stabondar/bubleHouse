@@ -46,7 +46,7 @@ export default class Text
                     let tl = gsap.timeline({paused: true, defaults: {duration: 0.8, ease: 'power1', stagger: 0.02}})
                     tl.from(chars, { opacity: 0, y: 20},)
                     .to(chars, {clearProps: "transform", duration: 0 })
-                    .fromTo(chars, { "-webkit-text-fill-color": "#807c7d" }, { "-webkit-text-fill-color": "transparent", duration: 0.1 }, '<')
+                    .fromTo(chars, { "-webkit-text-fill-color": "#333" }, { "-webkit-text-fill-color": "transparent", duration: 0.1 }, '<')
                     .to(chars, { backgroundPosition: "100% 50%", duration: 0.1 }, "<");
     
                     ScrollTrigger.create({
@@ -59,6 +59,28 @@ export default class Text
 
             charAnimation()
             }
+
+            const charAnimation1 = () => {
+                let item = $('[text-char1]')
+                splitChar = new SplitText(item, {type: 'words, chars'})
+                $(item).each(function()
+                {
+                    let self = $(this)
+                    let chars = self.find(splitChar.chars)
+                    let words = self.find(splitChar.words)
+                    let tl = gsap.timeline({paused: true, defaults: {duration: 0.8, ease: 'power1', stagger: 0.02}})
+                    tl.from(chars, { opacity: 0, y: 20},)
+                    .to(chars, {clearProps: "transform", duration: 0 })
+    
+                    ScrollTrigger.create({
+                        trigger: self,
+                        start: enter,
+                        onEnter: () => tl.play()
+                    })
+                })
+            }
+
+            charAnimation1()
         
             window.addEventListener('load', () => init())
 

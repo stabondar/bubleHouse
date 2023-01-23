@@ -17,7 +17,7 @@ export default class Sticky
             let item = body.find('.scroll-cards__card')
             let mask = body.find('.scroll-cards__mask')
             let img = right.find('.scroll-cards__img')
-            let nextSection = $('.slider')
+            let heading = $('.scroll-cards__heading')
 
             mm.add(isDesktop, () => 
             {
@@ -30,10 +30,22 @@ export default class Sticky
                     trigger: list, start: 'top top', end: 'bottom 80%', pin: mask
                 })
 
-                // let opacity = gsap.timeline({
-                //     scrollTrigger: {trigger: list, start: 'bottom bottom', end: 'bottom 70%', scrub:true}
-                //     }).to(mask, { opacity: 0})
-    
+                ScrollTrigger.create({
+                    trigger: body, start: 'top top', end: 'bottom 80%', pin: heading
+                })
+
+                // const mask = () => {
+                //     const item = $('.scroll-cards__mask');
+                //     const bg1 = "linear-gradient(180deg, #f3f3f2 21%, hsla(0, 0%, 95.3%, 0) 50%, #f3f3f3)";
+                //     const bg2 = "linear-gradient(180deg, #f3f3f2 0%, hsla(0, 0%, 95.3%, 0) 20%, #f3f3f3)";
+
+                //     let tl = gsap.timeline()
+                //         tl.fromTo(item, { backgroundImage: bg2, scrub: true}, {backgroundImage: bg1, scrub: true})
+                //     }
+                // mask()
+
+
+
                 $(item).each(function(index) {
                     let self = $(this)
                     let currentImg = img.eq(index)
