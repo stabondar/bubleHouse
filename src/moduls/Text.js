@@ -22,7 +22,7 @@ export default class Text
                     let self = $(this)
                     let lines = self.find(splitLine.lines)
                     let tl = gsap.timeline({paused: true, defaults: {duration: 0.8, ease: 'power3', stagger: 0.04}})
-                    tl.from(lines, {yPercent: 100, opacity: 0})
+                    tl.from(lines, {yPercent: 100, opacity: 0, clearProps: 'all'})
     
                     ScrollTrigger.create({
                         trigger: self,
@@ -36,13 +36,18 @@ export default class Text
     
             const charAnimation = () => {
                 let item = $('[text-char]')
-                splitChar = new SplitText(item, {type: 'words'})
+                splitChar = new SplitText(item, {type: 'words, chars'})
                 $(item).each(function()
                 {
                     let self = $(this)
-                    let chars = self.find(splitChar.words)
-                    let tl = gsap.timeline({paused: true, defaults: {duration: 0.8, ease: 'power3', stagger: 0.02}})
-                    tl.from(chars, {yPercent: 100, opacity: 0})
+                    let chars = self.find(splitChar.chars)
+                    let words = self.find(splitChar.words)
+                    gsap.set([chars, words], {position: 'static'})
+                    let tl = gsap.timeline({paused: true, defaults: {duration: 0.8, ease: 'power1', stagger: 0.02}})
+                    tl.from(chars, { opacity: 0, y: 20},)
+                    .to(chars, {clearProps: "transform", duration: 0 })
+                    .fromTo(chars, { "-webkit-text-fill-color": "#807c7d" }, { "-webkit-text-fill-color": "transparent", duration: 0.1 }, '<')
+                    .to(chars, { backgroundPosition: "100% 50%", duration: 0.1 }, "<");
     
                     ScrollTrigger.create({
                         trigger: self,

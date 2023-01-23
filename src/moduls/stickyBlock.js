@@ -27,19 +27,19 @@ export default class Sticky
                 })
 
                 ScrollTrigger.create({
-                    trigger: list, start: 'top top', end: 'bottom bottom', pin: mask
+                    trigger: list, start: 'top top', end: 'bottom 80%', pin: mask
                 })
 
-                let opacity = gsap.timeline({
-                    scrollTrigger: {trigger: list, start: 'bottom bottom', end: 'bottom 70%', scrub:true}
-                    }).to(mask, { opacity: 0})
+                // let opacity = gsap.timeline({
+                //     scrollTrigger: {trigger: list, start: 'bottom bottom', end: 'bottom 70%', scrub:true}
+                //     }).to(mask, { opacity: 0})
     
                 $(item).each(function(index) {
                     let self = $(this)
                     let currentImg = img.eq(index)
                     let tl = gsap.timeline({
                         scrollTrigger: { 
-                            trigger: self, start: 'top 60%', end: 'bottom bottom', toggleActions: 'restart none restart none',
+                            trigger: self, start: 'top 60%', end: 'bottom bottom',
                             onEnter: () => 
                             {
                                 img.removeClass('active')
