@@ -112,7 +112,7 @@ export default class LocoGsap
             });
 
             $('[learn-more]').eq(1).on('click', function() {
-                const slider = document.querySelector('#solution');
+                const slider = document.querySelector('#launchpad');
                     gsap.to(window, { duration: 1, scrollTo: slider, onComplete: () => { gsap.to(window, { duration: 1, scrollTo: slider }) } })
             });
         }
