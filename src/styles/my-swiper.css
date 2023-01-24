@@ -5,6 +5,13 @@
   height: 0.36em !important;
   background: #333333;
 }
+@media screen and (max-width: 465px) {
+  .swiper-scrollbar {
+    width: 54.74em !important;
+    height: 1.5em !important;
+    margin: 8em auto 0;
+  }
+}
 .swiper-scrollbar-drag {
   background: linear-gradient(107.52deg, #94D8FF -3.8%, #9887FF 74.8%) !important;
 }
@@ -13,9 +20,19 @@
   width: 31.15em;
   height: auto;
 }
+@media screen and (max-width: 465px) {
+  .slide.swiper-slide {
+    width: 89.33em;
+  }
+}
 
 .launchpad__slider-card.swiper-slide {
   width: 23.13em;
+}
+@media screen and (max-width: 465px) {
+  .launchpad__slider-card.swiper-slide {
+    width: 89.33em;
+  }
 }
 
 .launchpad-scrollbar.swiper-scrollbar-horizontal {
@@ -25,12 +42,25 @@
   border-radius: 100vw;
   margin: 0 auto;
 }
+@media screen and (max-width: 465px) {
+  .launchpad-scrollbar.swiper-scrollbar-horizontal {
+    width: 54.74em !important;
+    height: 1.5em !important;
+    margin: 8em auto 0;
+  }
+}
 
 .swiper-pagination {
   position: relative !important;
   margin-top: 1.3em;
   text-align: left !important;
   margin-left: 7.29em;
+}
+@media screen and (max-width: 465px) {
+  .swiper-pagination {
+    text-align: center !important;
+    margin-left: 0em;
+  }
 }
 .swiper-pagination-bullet {
   background-color: #D9D9D9 !important;

@@ -93,27 +93,27 @@ export default class Slider
       effect: "fade",
       autoplay: {
         delay: 2500,
-    },
-      // direction: "horizontal",
+      },
       speed: 1000,
-      // grabCursor: true,
-      // slidesPerView: 'auto',
       loop: true,
       slidersPerView: 1,
       centeredSlides: false,
       breakpoints: {
         320: {
-          centeredSlides: true,
+          centeredSlides: false,
+          slidersPerView: 1,
           spaceBetween: 24
         },
 
         480: {
-          centeredSlides: true,
+          centeredSlides: false,
+          slidersPerView: 1,
           spaceBetween: 24
         },
 
         991: {
           centeredSlides: false,
+          slidersPerView: 1,
           spaceBetween: 24
         }
       },

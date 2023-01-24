@@ -6,6 +6,11 @@
   opacity: 0;
   transition: opacity 0.4s ease;
 }
+@media screen and (max-width: 479px) {
+  .scroll-cards__img {
+    position: relative;
+  }
+}
 .scroll-cards__img.active {
   opacity: 1 !important;
 }/*# sourceMappingURL=stickyBlock.css.map */
