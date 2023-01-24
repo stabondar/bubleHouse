@@ -94,6 +94,27 @@ export default class LocoGsap
                 const slider = document.querySelector('#contacts');
                     gsap.to(window, { duration: 1, scrollTo: slider, onComplete: () => { gsap.to(window, { duration: 1, scrollTo: slider }) } })
             });
+
+            $('.nav__link').eq(0).on('click', function() {
+                const slider = document.querySelector('#solution');
+                    gsap.to(window, { duration: 1, scrollTo: slider, onComplete: () => { gsap.to(window, { duration: 1, scrollTo: slider }) } })
+            });
+
+            $('.nav__link').eq(1).on('click', function() {
+                const slider = document.querySelector('#launchpad');
+                    gsap.to(window, { duration: 1, scrollTo: slider, onComplete: () => { gsap.to(window, { duration: 1, scrollTo: slider }) } })
+            });
+
+
+            $('[learn-more]').eq(0).on('click', function() {
+                const slider = document.querySelector('#solution');
+                    gsap.to(window, { duration: 1, scrollTo: slider, onComplete: () => { gsap.to(window, { duration: 1, scrollTo: slider }) } })
+            });
+
+            $('[learn-more]').eq(1).on('click', function() {
+                const slider = document.querySelector('#solution');
+                    gsap.to(window, { duration: 1, scrollTo: slider, onComplete: () => { gsap.to(window, { duration: 1, scrollTo: slider }) } })
+            });
         }
 
         window.addEventListener('load', () => init())
