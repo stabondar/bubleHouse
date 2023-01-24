@@ -80,6 +80,7 @@ export default class LocoGsap
         $('[contact-us]').on('click', function() {
             const slider = document.querySelector('#contacts');
                 locoScroll.scrollTo(slider)
+                console.log(slider);
         });
 
         $('[learn-more]').eq(0).on('click', function() {
