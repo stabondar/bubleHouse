@@ -67,6 +67,8 @@ export default class LocoGsap
             locoScroll.update();
         });
 
+        if (window.innerWidth > 991) 
+            {
         $('.nav__link').eq(0).on('click', function() {
             const slider = document.querySelector('#solution');
                 locoScroll.scrollTo(slider)
@@ -92,6 +94,7 @@ export default class LocoGsap
             const slider = document.querySelector('#launchpad');
                 locoScroll.scrollTo(slider)
         });
+    }
     }
 }
 
