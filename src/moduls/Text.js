@@ -121,9 +121,9 @@ export default class Text
         
                     window.addEventListener('resize', debounce(function (e) {checkWidth()}))
                 }
+                cardMask()
         })
 
-        cardMask()
     }
 }
         
