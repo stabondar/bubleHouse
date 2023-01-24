@@ -123,7 +123,6 @@ export default class Text
                 }
         })
 
-
         cardMask()
     }
 }

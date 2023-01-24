@@ -14,14 +14,16 @@ export default class LocoGsap
         gsap.registerPlugin(ScrollTrigger)
         
         let locoScroll
-        if (window.innerWidth > 480) 
-        {
+        // if (window.innerWidth > 480) 
+        // {
             locoScroll = new LocomotiveScroll({
                 el: document.querySelector('.main'),
                 smooth: true,
                 multiplier: 1.0,
                 lerp: 0.15
             });
+            if (window.innerWidth > 480) 
+            {
             locoScroll.on('scroll', ScrollTrigger.update);
             ScrollTrigger.scrollerProxy('.main', {
                 scrollTop(value) {
@@ -37,7 +39,8 @@ export default class LocoGsap
                 },
                 pinType: document.querySelector('.main').style.transform ? 'transform' : 'fixed'
             });
-        }
+            }
+        
         ScrollTrigger.defaults({
             scroller: '.main'
         })
