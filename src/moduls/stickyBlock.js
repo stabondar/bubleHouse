@@ -37,7 +37,7 @@ export default class Sticky
                 const mask1 = () => {
                     const item = $('.scroll-cards__mask');
                     const bg1 = "linear-gradient(180deg, #F3F3F3 26.43%, rgba(243, 243, 243, 0) 34.39%, rgba(243, 243, 243, 0) 81.06%, #F3F3F3 100%)";
-                    const bg2 = "linear-gradient(180deg, #F3F3F3 21.12%, rgba(243, 243, 243, 0) 27.53%, rgba(243, 243, 243, 0) 62.48%, #F3F3F3 88.8%)";
+                    const bg2 = "linear-gradient(180deg, #F3F3F3 15.81%, rgba(243, 243, 243, 0) 20.46%, rgba(243, 243, 243, 0) 61.38%, #F3F3F3 82.17%)";
 
                     let tl = gsap.timeline({
                         scrollTrigger : {
