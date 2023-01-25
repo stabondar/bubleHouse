@@ -115,6 +115,16 @@ export default class LocoGsap
                 const slider = document.querySelector('#launchpad');
                     gsap.to(window, { duration: 1, scrollTo: slider, onComplete: () => { gsap.to(window, { duration: 1, scrollTo: slider }) } })
             });
+
+            $('[os-burger]').on('click', function() {
+                const slider = document.querySelector('#solution');
+                    gsap.to(window, { duration: 1, scrollTo: slider, onComplete: () => { gsap.to(window, { duration: 1, scrollTo: slider }) } })
+            });
+
+            $('[launchpad-burger]').on('click', function() {
+                const slider = document.querySelector('#launchpad');
+                    gsap.to(window, { duration: 1, scrollTo: slider, onComplete: () => { gsap.to(window, { duration: 1, scrollTo: slider }) } })
+            });
         }
 
         window.addEventListener('load', () => init())

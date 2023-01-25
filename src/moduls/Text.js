@@ -16,6 +16,7 @@ export default class Text
             {
                 const cardMask = () => {  
                     let enter = 'top 80%'
+                    let enter1 = 'top 70%'
                     let splitLine, splitChar
                     const init = () => {
         
@@ -40,23 +41,23 @@ export default class Text
                     lineAnimation()
             
                     const charAnimation = () => {
-                        let item = $('[text-char]')
-                        splitChar = new SplitText(item, {type: 'words, chars'})
-                        $(item).each(function()
-                        {
+                    const item = $('[text-char]')
+                        // splitChar = new SplitText(item, {type: 'words, chars'})
+                        $(item).each(function() {
+                        
                             let self = $(this)
-                            let chars = self.find(splitChar.chars)
-                            let words = self.find(splitChar.words)
-                            gsap.set([chars, words], {position: 'static'})
-                            let tl = gsap.timeline({paused: true, defaults: {duration: 0.8, ease: 'power1', stagger: 0.02}})
-                            tl.from(chars, { opacity: 0, y: 20},)
-                            .to(chars, {clearProps: "transform", duration: 0 })
-                            .fromTo(chars, { "-webkit-text-fill-color": "#333" }, { "-webkit-text-fill-color": "transparent", duration: 0.1 }, '<')
-                            .to(chars, { backgroundPosition: "100% 50%", duration: 0.1 }, "<");
+                            // let chars = self.find(splitChar.chars)
+                            // let words = self.find(splitChar.words)
+                            // gsap.set([chars, words], {position: 'static'})
+                            let tl = gsap.timeline({paused: true, defaults: {duration: 0.8, ease: 'power3'}})
+                                tl.from(self, { opacity: 0, y: 45});
+                            // .to(chars, {clearProps: "transform", duration: 0 })
+                            // .fromTo(chars, { "-webkit-text-fill-color": "#333" }, { "-webkit-text-fill-color": "transparent", duration: 0.1 }, '<')
+                            // .to(chars, { backgroundPosition: "100% 50%", duration: 0.1 }, "<");
             
                             ScrollTrigger.create({
                                 trigger: self,
-                                start: enter,
+                                start: enter1,
                                 onEnter: () => tl.play()
                             })
                         })

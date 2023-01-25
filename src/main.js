@@ -6,6 +6,7 @@ import Tabs from './moduls/Tabs'
 import Sticky from './moduls/stickyBlock'
 import Text from './moduls/Text'
 import Lines from './moduls/lines'
+import Burger from './moduls/burger'
 
 const checkPages = () => 
 {
@@ -15,5 +16,6 @@ const checkPages = () =>
     const sticky = new Sticky()
     const text = new Text()
     const lines = new Lines()
+    const burger = new Burger()
 }
 checkPages()

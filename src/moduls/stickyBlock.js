@@ -34,20 +34,19 @@ export default class Sticky
                     trigger: body, start: 'top top', end: 'bottom 80%', pin: heading
                 })
 
-                // const mask = () => {
-                //     const item = $('.scroll-cards__mask');
-                //     const bg1 = "linear-gradient(180deg, #f3f3f2 21%, hsla(0, 0%, 95.3%, 0) 50%, #f3f3f3)";
-                //     const bg2 = "linear-gradient(180deg, #f3f3f2 0%, hsla(0, 0%, 95.3%, 0) 20%, #f3f3f3)";
+                const mask1 = () => {
+                    const item = $('.scroll-cards__mask');
+                    const bg1 = "linear-gradient(180deg, #F3F3F3 26.43%, rgba(243, 243, 243, 0) 34.39%, rgba(243, 243, 243, 0) 81.06%, #F3F3F3 100%)";
+                    const bg2 = "linear-gradient(180deg, #F3F3F3 21.12%, rgba(243, 243, 243, 0) 27.53%, rgba(243, 243, 243, 0) 62.48%, #F3F3F3 88.8%)";
 
-                //     let tl = gsap.timeline({
-                //         scrollTrigger : {
-                //             trigger: body, start: 'top top', end: 'bottom 80%', pin: heading, scrub: true
-                //         }
-                //     })
-                //         tl.fromTo(item, { backgroundImage: bg2}, {backgroundImage: bg1})
-                        
-                //     }
-                // mask()
+                    let tl = gsap.timeline({
+                        scrollTrigger : {
+                            trigger: body, start: 'top top', end: 'bottom 80%', scrub: true
+                        }
+                    })
+                        tl.fromTo(item, {background: bg2}, {background: bg1})
+                }
+                mask1()
 
 
 
@@ -74,24 +73,6 @@ export default class Sticky
                     new ResizeObserver(() => ScrollTrigger.refresh(true)).observe(wrapper)
                 })
             })
-
-            // mm.add(isMobile, () => 
-            // {
-            //     $(item).each(function(index) 
-            //     {
-            //         let self = $(this),
-            //             div = self.find('.feature__text'),
-            //             currentImg = img.eq(index)
-                    
-            //         currentImg.clone().appendTo(div)
-
-            //         if(index === 3) 
-            //         {
-            //             let btn = self.find('.feature__btn')
-            //             btn.appendTo(div)
-            //         }
-            //     })
-            // })
         }
         window.addEventListener('load', () => init())
     }
