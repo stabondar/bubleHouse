@@ -25,6 +25,10 @@ $scrollbar-height: 0.36em;
     width: 31.15em;
     height: auto;
 
+    @media screen and (max-width: 991px) {
+        width: 45em;
+      }
+
     @media screen and (max-width: 465px) {
         width: 89.33em;
       }
@@ -33,6 +37,10 @@ $scrollbar-height: 0.36em;
 //is for launchpad slider
 .launchpad__slider-card.swiper-slide {
     width: 23.13em;
+
+    @media screen and (max-width: 991px) {
+        width: 44.66em;
+      }
 
     @media screen and (max-width: 465px) {
         width: 89.33em;
@@ -60,7 +68,7 @@ $scrollbar-height: 0.36em;
     text-align: left !important;
     margin-left: 7.29em;
 
-    @media screen and (max-width: 465px) {
+    @media screen and (max-width: 991px) {
         text-align: center !important;
         margin-left: 0em;
       }
@@ -99,6 +107,17 @@ $scrollbar-height: 0.36em;
         gap: 1em;
         padding-right: 10em;
 
+        @media screen and (max-width: 991px) {
+            justify-content: center;
+            padding-right: 0em;
+            bottom: -9em !important;
+            gap: 2em;
+        }
+
+        @media screen and (max-width: 465px) {
+            bottom: -12em !important;
+        }
+
         &-bullet {
             width: 3.65em;
             height: 3.65em;
@@ -110,6 +129,16 @@ $scrollbar-height: 0.36em;
             background-size: 100% 100%;
             flex-shrink: 0;
             flex-grow: 0;
+
+            @media screen and (max-width: 991px) {
+                width: 7em;
+                height: 7em;
+            }
+
+            @media screen and (max-width: 465px) {
+                width: 9em;
+                height: 9em;
+            }
             
 
             &:nth-child(1) {
@@ -162,7 +191,39 @@ $scrollbar-height: 0.36em;
     height: 100%;
     top: 0;
     margin: 0;
+    z-index: 11;
+
+    @media screen and (max-width: 991px) {
+        width: 7em;
+        height: 7em;
+    }
+
+    @media screen and (max-width: 460px) {
+        width: 5em;
+        height: 5em;
+    }
 }
+
+.swiper-button-prev {
+    @media screen and (max-width: 991px) {
+        bottom: -0.83em !important;
+    }
+
+    @media screen and (max-width: 460px) {
+        bottom: -4em !important;
+    }
+}
+
+.swiper-button-next {
+    @media screen and (max-width: 991px) {
+        bottom: -9.3em !important;
+    }
+
+    @media screen and (max-width: 460px) {
+        bottom: -10.1em !important;
+    }
+}
+
 
 .swiper-button-prev:after,
 .swiper-button-next:after {
@@ -173,5 +234,10 @@ $scrollbar-height: 0.36em;
     background-image: url('https://uploads-ssl.webflow.com/63c9878806c2d26dbdb86947/63d3e0a8bff97961ad2282cf_chevron-right.svg');
     background-repeat: no-repeat;
     background-position: center;
+
+    @media screen and (max-width: 460px) {
+        width: 100%;
+        height: 100%;
+    }
 }
 

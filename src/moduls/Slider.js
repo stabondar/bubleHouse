@@ -26,12 +26,12 @@ export default class Slider
       centeredSlides: false,
       breakpoints: {
         320: {
-          centeredSlides: true,
+          centeredSlides: false,
           spaceBetween: 24
         },
 
         480: {
-          centeredSlides: true,
+          centeredSlides: false,
           spaceBetween: 24
         },
 
@@ -61,12 +61,12 @@ export default class Slider
       centeredSlides: false,
       breakpoints: {
         320: {
-          centeredSlides: true,
+          centeredSlides: false,
           spaceBetween: 24
         },
 
         480: {
-          centeredSlides: true,
+          centeredSlides: false,
           spaceBetween: 24
         },
 
@@ -123,7 +123,6 @@ export default class Slider
 
 
     //is brands slider
-
     $(".brand-slider").append(`<div class="swiper-pagination"></div>`);
     const swiperBrands = new Swiper('.brand-slider', {
       modules: [Pagination, Navigation, EffectFade],
@@ -162,5 +161,12 @@ export default class Slider
         clickable: true
       }
     });
+
+    //is brands slider
+    const swiperCompare = new Swiper('.compare__block', {
+          speed: 800,
+          slidersPerView: 1,
+          centeredSlides: false
+        });
   }
 }
