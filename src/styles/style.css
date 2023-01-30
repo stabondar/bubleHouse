@@ -28,6 +28,13 @@ main {
   border-bottom:  1px solid #f3f3f3;
 }
 
+.js-accordion-item:has(+.js-accordion-item.active) {
+  border-bottom:  1px solid #fff;
+}
+
+.js-accordion-body {
+	display: none;
+}
 
 @media screen and (max-width: 479px) {
   .tabs__tab-link.w--current .tabs__link-img {
