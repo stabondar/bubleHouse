@@ -1,6 +1,6 @@
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import Swiper, { Pagination, Autoplay, Scrollbar, EffectFade } from 'swiper'
+import Swiper, { Pagination, Navigation,  Autoplay, Scrollbar, EffectFade } from 'swiper'
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -101,21 +101,60 @@ export default class Slider
       breakpoints: {
         320: {
           centeredSlides: false,
-          slidersPerView: 1,
-          spaceBetween: 24
+          slidersPerView: 1
         },
 
         480: {
           centeredSlides: false,
-          slidersPerView: 1,
-          spaceBetween: 24
+          slidersPerView: 1
         },
 
         991: {
           centeredSlides: false,
-          slidersPerView: 1,
-          spaceBetween: 24
+          slidersPerView: 1
         }
+      },
+
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      }
+    });
+
+
+    //is brands slider
+
+    $(".brand-slider").append(`<div class="swiper-pagination"></div>`);
+    const swiperBrands = new Swiper('.brand-slider', {
+      modules: [Pagination, Navigation, EffectFade],
+      // keyboard: true,
+      fadeEffect: { crossFade: true },
+      virtualTranslate: true,
+      effect: "fade",
+      speed: 800,
+      loop: true,
+      slidersPerView: 1,
+      centeredSlides: false,
+      breakpoints: {
+        320: {
+          centeredSlides: false,
+          slidersPerView: 1
+        },
+
+        480: {
+          centeredSlides: false,
+          slidersPerView: 1
+        },
+
+        991: {
+          centeredSlides: false,
+          slidersPerView: 1
+        }
+      },
+
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
       },
 
       pagination: {
