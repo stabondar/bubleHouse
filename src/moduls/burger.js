@@ -30,5 +30,12 @@ export default class Burger
           body.css({"overflow": "auto", "height": "auto"});
           burgerBg .fadeOut();
       });
+
+window.addEventListener('load', () => 
+        {
+            setTimeout(() => {
+                gsap.set($('.nav__logo.is--mob'), {autoAlpha: 1})
+            }, 1500);
+        })
     }
 }
